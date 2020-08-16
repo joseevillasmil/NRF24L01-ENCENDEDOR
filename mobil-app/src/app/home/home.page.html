@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      DEMO
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <ion-row>
+      <ion-col>
+        <h3 align="center">Cuarto 1</h3>
+        <ion-button expand="full" color="success" (click)="encender('1')">ENCENDER</ion-button><br>
+        <ion-button expand="full" color="danger" (click)="apagar('1')" >APAGAR</ion-button>
+      </ion-col>
+      <ion-col>
+        <h3 align="center">Sala 1</h3>
+        <ion-button expand="full" color="success" (click)="encender('2')">ENCENDER</ion-button><br>
+        <ion-button expand="full" color="danger" (click)="apagar('2')" >APAGAR</ion-button>
+      </ion-col>
+    </ion-row>
+
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-button expand="full" (click)="conectar()" color="primary">CONECTAR</ion-button>
+</ion-footer>
