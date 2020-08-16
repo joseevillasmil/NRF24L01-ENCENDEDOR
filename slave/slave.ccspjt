@@ -64,12 +64,12 @@ Fixed=
 t1=1
 Count=2
 2=nrf.c
-t2=199
+t2=1
 
 [ProjectLog]
 Days=1
 D1=15-08-2020
-D1_L=5
+D1_L=13
 D1_L1=[75051]Project Closed.
 D1_L2=[75051]Project Opened.
 D1_L3=[75057]Started Editing.
@@ -79,6 +79,14 @@ TotalDebug=0
 D1_E=9
 D1_D=0
 D1_L5=[75571]Project Closed.
+D1_L6=[76219]Project Opened.
+D1_L7=[76563]Project Closed.
+D1_L8=[76675]Project Opened.
+D1_L9=[78811]Project Closed.
+D1_L10=[78811]Project Opened.
+D1_L11=[78828]Project Closed.
+D1_L12=[78868]Project Opened.
+D1_L13=[80248]Project Closed.
 [Units]
 Count=1
 1=slave (main)
