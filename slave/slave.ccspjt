@@ -1,0 +1,84 @@
+[Directories]
+Include=
+Library=
+LinkerScript=
+output=
+
+[defines]
+enabled=0
+chip=1
+D1=
+V1=
+buildcount=3
+
+[fileformats]
+forcecoff=0
+debug=4
+error=2
+object=0
+list=0
+scratch=0
+sta=1
+tre=1
+expandtree=0
+allerrors=1
+allwarnings=1
+stayupne=3
+stayupoe=0
+
+[PROJECT]
+Target=slave.hex
+Development_Mode=
+Processor_Text=PIC16F628A
+ToolSuite=CCS
+CCSVersion=5.076
+Compiler=PCM
+
+[Target Data]
+BuildTool=C-COMPILER
+OptionString=+FM
+AdditionalOptionString=
+BuildRequired=1
+FileList=slave.c
+
+[slave.c]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+
+[mru-list]
+1=slave.c
+
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+
+
+[CompilerVersion]
+Fixed=
+
+[Opened Files]
+1=slave.c
+t1=1
+Count=2
+2=nrf.c
+t2=199
+
+[ProjectLog]
+Days=1
+D1=15-08-2020
+D1_L=5
+D1_L1=[75051]Project Closed.
+D1_L2=[75051]Project Opened.
+D1_L3=[75057]Started Editing.
+D1_L4=[75571]Stopped Editing.
+TotalEdit=9
+TotalDebug=0
+D1_E=9
+D1_D=0
+D1_L5=[75571]Project Closed.
+[Units]
+Count=1
+1=slave (main)

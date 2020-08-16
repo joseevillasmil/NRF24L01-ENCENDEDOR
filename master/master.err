@@ -1,0 +1,8 @@
+Compiling C:\Users\José\Documents\pic\nrf encendedor\master\master on 15-ago.-20 at 20:50
+>>> Warning 203 "master.c" Line 58(1,1): Condition always TRUE
+>>> Warning 216 "master.c" Line 61(1,2): Interrupts disabled during call to prevent re-entrancy:  (@SPI_XFER_1)
+>>> Warning 202 "C:\Users\José\Documents\pic\nrf encendedor\master\nrf.c" Line 48(9,19): Variable never used:   DATA_IN_RX
+>>> Warning 202 "C:\Users\José\Documents\pic\nrf encendedor\master\nrf.c" Line 232(9,16): Variable never used:   i_rf_rx
+      Memory usage:   ROM=17%      RAM=32% - 40%
+      0 Errors,  4 Warnings.
+Build Successful.

@@ -1,0 +1,65 @@
+
+ROM used:   698/4096 (17%)
+            698/4096 (17%) including unused fragments
+
+            0.2 Average locations per line
+            1.1 Average locations per statement
+
+RAM used:   62/191 (32%) at main() level
+            77/191 (40%) worst case
+
+Stack used: 1 worst case (0 in main + 1 for interrupts)
+Stack size: 8
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   62    22   3  master.c
+    5     0   0  master.h
+  633     0   0  ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F873A.h
+  306   151  23  nrf.c
+ 1352   359  54  ..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\STDLIB.H
+   32     0   0  ..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stddef.h
+  435   129  20  ..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\string.h
+   28     0   0  ..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\ctype.h
+----- -----
+ 2853   661 Total
+
+Page ROM  %  RAM    Vol Diff  Functions:
+---- --- --- ---    --- ----  ----------
+0     19   3    1             @delay_ms1
+0     36   5    5    496  8.2  @SPI_XFER_1
+0     13   2    0     52  1.1  pulse_CSN
+0     10   1    0     32  1.0  init_rf
+0     15   2    0     38  1.0  flush_rx
+ Inline         0    522  1.4  configure_tx
+ Inline         1    174  3.5  MAX_RT
+ Inline         1    174  3.5  rf_data_sent
+0    264  38    7   1024  6.3  send_shock_burst
+0     73  10    0    359  2.7  RDA_isr
+0      2   0    0             @const927
+0     88  13    4    567  2.4  @PSTRINGC7_1
+0      1   0    0    407  4.7  @const932
+0     94  13    2    238  4.1  MAIN
+ Inline         0    129  1.7  @cinit1
+
+Program metrics:
+    Functions               13
+    Statements              661
+    Comments                1054
+    Volume (V)              6824
+    Difficulty (D)          42.3
+    Effort to implement (E) 288883
+    Time to implement (T)   4 hours, 27 minutes
+    Est Delivered Bugs (B)  1
+    Cyclomatic Complexity   12
+    Maintainability (MI)    124
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-00052    79  0  
+00053-007FF   615  1350  
+00800-00FFF     0  2048  
+
+
+

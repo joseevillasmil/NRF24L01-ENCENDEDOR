@@ -1,0 +1,75 @@
+#include <master.h>
+#use spi (CLK=PIN_B7, DI=PIN_B5, DO=PIN_B6, ENABLE=PIN_B4, MODE=0, BITS=8, , msb_first)
+#use RS232 (baud = 9600, bits = 8, parity = N, xmit = pin_c6, rcv = pin_c7)
+
+
+/*******************************************************************************/
+#define  RF24_CS        PIN_A0    //RC1;  chipselect nRF24L01+
+#define  RF24_CE        PIN_A1    //RC2;  chipEnable nRF24L01+
+#define  RF24_IRQ       PIN_B0    // interrupt pin
+/*******************************************************************************/
+
+/*******************STATUS LED DEFINE**************************************/
+#define  alive          PIN_B3   //
+
+
+#include <nrf.c>
+char device;
+char action;
+
+#INT_RDA
+void  RDA_isr(void) 
+{
+       device = getc();
+       delay_ms(5);
+       action = getc();
+       puts("ok ");
+       putc(device);
+       putc(action);
+       puts("\n");
+       
+       RF_TX_DATA[1] = action;
+       send_shock_burst(device,s_ad2,s_ad3,s_ad4,s_ad5);
+       delay_ms(50);
+       send_shock_burst(device,s_ad2,s_ad3,s_ad4,s_ad5);
+}
+
+
+void set_data(){ // this is the transmit array where you can put your data to transmit on air
+   
+   RF_TX_DATA[0] = 0x31; 
+   RF_TX_DATA[1] = 0x31; // 1
+   RF_TX_DATA[2] = 0x32; // 2
+   RF_TX_DATA[3] = 0x33; // 3
+   RF_TX_DATA[4] = 0x34; // 4
+   RF_TX_DATA[5] = 0x35; // 5
+   RF_TX_DATA[6] = 0x36; // 6
+   RF_TX_DATA[7] = 0x37; // 7
+   RF_TX_DATA[8] = 0x38; // 8
+   RF_TX_DATA[9] = 0x39; // 9
+   RF_TX_DATA[10] = 0x41; // A
+   RF_TX_DATA[11] = 0x42; // B
+   RF_TX_DATA[12] = 0x43; // C
+   RF_TX_DATA[13] = 0x44; // D
+   RF_TX_DATA[14] = 0x45; // E
+   RF_TX_DATA[15] = 0x31; // F
+   
+}
+
+void main()
+{
+   set_data();
+   
+   set_tris_b(0b00100011);
+   set_tris_c(0b10000000);
+   init_rf();
+   flush_rx(); // i use this to avoid confusion for beginers
+   enable_interrupts(INT_RDA);
+   enable_interrupts(GLOBAL);
+   
+   while(1) {
+      
+      //send_shock_burst(s_ad1,s_ad2,s_ad3,s_ad4,s_ad5);
+     // delay_ms(200);
+   }
+}

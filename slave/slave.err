@@ -1,0 +1,6 @@
+Compiling C:\Users\José\Documents\pic\nrf encendedor\slave\slave on 15-ago.-20 at 20:57
+>>> Warning 202 "C:\Users\José\Documents\pic\nrf encendedor\slave\nrf.c" Line 48(9,19): Variable never used:   DATA_IN_RX
+>>> Warning 202 "C:\Users\José\Documents\pic\nrf encendedor\slave\nrf.c" Line 232(9,16): Variable never used:   i_rf_rx
+      Memory usage:   ROM=21%      RAM=20% - 24%
+      0 Errors,  2 Warnings.
+Build Successful.
